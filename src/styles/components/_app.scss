@@ -1,0 +1,8 @@
+.App {
+  background: #f6f6ef;
+
+  @include medium-breakpoint {
+    margin: 0.75rem auto;
+    width: 85%;
+  }
+}
