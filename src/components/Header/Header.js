@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import logo from "./../../images/y18.gif";
 
 const Header = props => (
@@ -7,8 +8,18 @@ const Header = props => (
       <img src={logo} alt="Hacker Logo" />
     </div>
     <div className="Header__links">
-      <span className="Header__title">Hacker News</span>
-      <div>new | past | comments | ask |show | jobs | submit</div>
+      <NavLink to="/news">
+        <span className="Header__title">Hacker News</span>
+      </NavLink>
+      <div>
+        <NavLink to="/new">new</NavLink> | {/* prettier-ignore */}
+        <NavLink to="/past"> past</NavLink> |
+        <NavLink to="/comments"> comments</NavLink> |
+        <NavLink to="/ask"> ask</NavLink> | {/* prettier-ignore */}
+        <NavLink to="/show"> show</NavLink> | {/* prettier-ignore */}
+        <NavLink to="/jobs"> jobs</NavLink> |
+        <NavLink to="/submit"> submit</NavLink>
+      </div>
     </div>
     <div>login</div>
   </div>
