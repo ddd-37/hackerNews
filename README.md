@@ -1,8 +1,8 @@
 # Hacker News Clone
 
-A project I created to mimic the UI of Hacker News (https://news.ycombinator.com/news)
+A React & react-router-powered clone of [Hacker News](https://news.ycombinator.com/news) using its [Firebase API](https://github.com/HackerNews/API).
 
-You can find a working demo at https://ddd-37.github.io/hackernews
+You can find a working demo at [here](https://ddd-37.github.io/hackernews)
 
 ## Requirements
 node/npm
