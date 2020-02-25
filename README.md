@@ -1,68 +1,40 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Hacker News Clone
 
-## Available Scripts
+A React & react-router-powered clone of [Hacker News](https://news.ycombinator.com/news) using its [Firebase API](https://github.com/HackerNews/API).
 
-In the project directory, you can run:
+You can find a working demo at [here](https://ddd-37.github.io/hackernews)
 
-### `npm start`
+## Requirements
+node/npm
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Libraries/packages used
+- React
+- Moment
+- Axios
+- React-html-parser
+- node-sass
+- React-router-dom
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Features
+- Supports display of all item types: stories, jobs, comments, user profiles
 
-### `npm test`
+## To Dos
+1. Enable caching of data from stories to help wtih quicker navigation and remove redundant network requests
+2. Enable marker/style changes to indicate previously red articles
+3. Enhance UI for mobile to improve experience
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Issues OUTSTANDING
+1. Issue: The API available from Hacker News while robust is a bit clunky to use at times. For example, if we were to request all the comments for a certain story, the API will return us the ID for each comment with the request for a story.  After which we need to make a request for each comment item from the API.
+- Solution: It may be possible to alleivate the numerous round trips to the Hacker News API by using [Algoia's Search API](https://hn.algolia.com/api). Algoia allow's for more custom requests were we can specify all comments for a certain story.
 
-### `npm run build`
+## Issues SOLVED
+1. Issue: Using react-router with gh-pages was giving some odd behavoir.  After deploying to github pages I found my project's index route "/" was returning a 404 error, while on my local copy everything worked just fine. I was also losing the base url of hackernews/.
+- Solution: After going around in circles on this for an hour, I found a prop I was able to customize in `BrowserRouter` that allowed me apply a custom base Url for my project.  After defining this prop to be 'hackernews', I was able to alleviate the 404 error for my "/" route as well as retain the base URL of 'hackernews' as I navigate around my local and github pages version of the site.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## How to run:
+Download or Clone the Repository.
+Run `npm install` to install the project dependencies 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+cd into project directory and use `npm start` to start the app.
+App can be seen at: localhost:3000
