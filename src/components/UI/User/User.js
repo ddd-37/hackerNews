@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import moment from "moment";
-import ReactHtmlParser, {
-  processNodes,
-  convertNodeToElement,
-  htmlparser2
-} from "react-html-parser";
+import ReactHtmlParser from "react-html-parser";
 
 class User extends Component {
   state = {
