@@ -27,7 +27,7 @@ const Story = ({ index, by, id, score, time, title, url, descendants }) => {
   return (
     <div className="Story">
       <div>
-        <span>{index}. &#9650;</span>{" "}
+        <span>{index}.</span>
         <StoryTitleDomainLink url={url} title={title} />
       </div>
       <div className="Story__lower">

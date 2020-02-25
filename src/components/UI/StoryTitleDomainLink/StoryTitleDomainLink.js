@@ -25,6 +25,7 @@ const StoryTitleDomainLink = ({ url, title }) => {
   // The domain link below needs to preform a query for all Hn stories related to that domain
   return (
     <>
+      <span>&#9650;</span>
       <a href={url}>{title}</a>
 
       <span className="Story__domain"> {domain}</span>
