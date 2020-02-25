@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Stories from "../UI/Story/Story";
-import Story from "./../UI/Story/Story";
+import Stories from "../../UI/Story/Story";
+import Story from "../../UI/Story/Story";
 
 // TODO: Add error handling
 
@@ -26,14 +26,15 @@ class News extends Component {
       const stories = await Promise.all(storyPromises);
 
       this.setState({ loading: false, data: stories });
-    } catch (error) {}
+    } catch (error) {
+      this.setState({ error });
+    }
   }
 
   render() {
     let content = "Loading";
     if (!this.state.loading) {
       content = this.state.data.map((story, i) => {
-        console.log("TCL: render -> story", story);
         return <Story key={story.data.id} index={i + 1} {...story.data} />;
       });
     }

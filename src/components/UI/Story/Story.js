@@ -1,5 +1,6 @@
 import React from "react";
 import moment from "moment";
+import { Link } from "react-router-dom";
 
 const Story = ({ index, by, id, score, time, title, url, descendants }) => {
   // The URLs get a little tricky.
@@ -14,23 +15,22 @@ const Story = ({ index, by, id, score, time, title, url, descendants }) => {
       url
         .replace("http://", "")
         .replace("https://", "")
+        .replace("www.", "")
         .split(/[/?#]/)
         .shift() +
       ")";
   }
 
   return (
-    <div>
+    <div className="Story">
       <div>
-        <a href={url}>
-          <span style={{ color: "#9A9A9A" }}>{index}. &#9650;</span> {title}{" "}
-          <span style={{ color: "#9A9A9A" }}>{domain}</span>
-        </a>
+        <span>{index}. &#9650;</span> <a href={url}>{title}</a>{" "}
+        <span className="Story__domain">{domain}</span>
       </div>
-      <div>
-        <span style={{ color: "#9A9A9A" }}>
-          {score} points by {by} {moment(time * 1000).fromNow()} | hide |{" "}
-          {descendants} comments
+      <div className="Story__lower">
+        <span>
+          {score} points by <Link to={`/user/${by}`}>{by}</Link>{" "}
+          {moment(time * 1000).fromNow()} | hide | {descendants} comments
         </span>
       </div>
     </div>

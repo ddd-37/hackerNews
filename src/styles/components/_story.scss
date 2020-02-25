@@ -1,0 +1,24 @@
+.Story {
+  margin-bottom: 1rem;
+}
+
+.Story span,
+.Story__lower a {
+  color: #9a9a9a;
+}
+
+.Story__lower a:hover {
+  text-decoration: underline;
+}
+
+.Story__domain,
+.Story__lower {
+  font-size: 1.5rem;
+  @include medium-breakpoint {
+    font-size: 1rem;
+  }
+}
+
+.Story__lower {
+  margin-left: 2.25rem;
+}
