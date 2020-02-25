@@ -38,7 +38,7 @@ const AppRouter = () => (
       <Submit />
     </Route>
     <Route exact path="/user/:userId" component={User} />
-    <Route exact path="*">
+    <Route exact path="/*">
       <div>Unknown.</div>
     </Route>
   </Switch>

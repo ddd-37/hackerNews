@@ -42,5 +42,13 @@
   },
   "devDependencies": {
     "gh-pages": "^2.2.0"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github,com/ddd-37/hackernews.git"
+  },
+  "author": "",
+  "license": "ISC"
 }

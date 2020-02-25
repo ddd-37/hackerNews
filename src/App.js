@@ -10,8 +10,9 @@ class App extends Component {
     data: null
   };
   render() {
+    console.log(process.env.PUBLIC_URL);
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <div className="App">
           <Header />
           <main>
