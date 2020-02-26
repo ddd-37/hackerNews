@@ -5,10 +5,9 @@ import { Switch, Route } from "react-router-dom";
 import News from "./../HeaderLinks/News/News";
 import New from "./../HeaderLinks/New/New";
 import Ask from "./../HeaderLinks/Ask/Ask";
+import Show from "./../HeaderLinks/Show/Show";
 import Jobs from "./../HeaderLinks/Jobs/Jobs";
-import Submit from "./../HeaderLinks/Submit/Submit";
 import User from "../UI/User/User";
-import StoryComments from "../UI/StoryComments/StoryComments";
 
 const AppRouter = () => (
   <Switch>
@@ -24,15 +23,13 @@ const AppRouter = () => (
     <Route path="/ask">
       <Ask />
     </Route>
+    <Route path="/show">
+      <Show />
+    </Route>
     <Route path="/jobs">
       <Jobs />
     </Route>
-
-    <Route path="/submit">
-      <Submit />
-    </Route>
     <Route exact path="/user/:userId" component={User} />
-    <Route exact path="/storycomments/:storyId" component={StoryComments} />
     <Route exact path="/*">
       <div>Unknown.</div>
     </Route>

@@ -4,7 +4,7 @@ import Story from "../../UI/Story/Story";
 
 // TODO: Add error handling
 
-class Jobs extends Component {
+class Show extends Component {
   state = {
     loading: true,
     data: null
@@ -13,7 +13,7 @@ class Jobs extends Component {
   async componentDidMount() {
     try {
       const ids = await axios.get(
-        'https://hacker-news.firebaseio.com/v0/jobstories.json?print=pretty&orderBy="$key"&limitToFirst=30'
+        'https://hacker-news.firebaseio.com/v0/showstories.json?print=pretty&orderBy="$key"&limitToFirst=30'
       );
 
       const storyPromises = ids.data.map(id => {
@@ -42,4 +42,4 @@ class Jobs extends Component {
   }
 }
 
-export default Jobs;
+export default Show;

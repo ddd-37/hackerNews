@@ -14,7 +14,6 @@ const Header = props => (
       <div>
         <NavLink to="/new">new</NavLink> |<NavLink to="/ask"> ask</NavLink> |{" "}
         <NavLink to="/show"> show</NavLink> |<NavLink to="/jobs"> jobs</NavLink>{" "}
-        |<NavLink to="/submit"> submit</NavLink>
       </div>
     </div>
     <div>login</div>
