@@ -7,7 +7,6 @@ import New from "./../HeaderLinks/New/New";
 import Ask from "./../HeaderLinks/Ask/Ask";
 import Comments from "./../HeaderLinks/Comments/Comments";
 import Jobs from "./../HeaderLinks/Jobs/Jobs";
-import Past from "./../HeaderLinks/Past/Past";
 import Submit from "./../HeaderLinks/Submit/Submit";
 import User from "../UI/User/User";
 import StoryComments from "../UI/StoryComments/StoryComments";
@@ -32,9 +31,7 @@ const AppRouter = () => (
     <Route path="/jobs">
       <Jobs />
     </Route>
-    <Route path="/past">
-      <Past />
-    </Route>
+
     <Route path="/submit">
       <Submit />
     </Route>

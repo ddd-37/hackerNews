@@ -13,7 +13,6 @@ const Header = props => (
       </NavLink>
       <div>
         <NavLink to="/new">new</NavLink> | {/* prettier-ignore */}
-        <NavLink to="/past"> past</NavLink> |
         <NavLink to="/comments"> comments</NavLink> |
         <NavLink to="/ask"> ask</NavLink> | {/* prettier-ignore */}
         <NavLink to="/show"> show</NavLink> | {/* prettier-ignore */}
