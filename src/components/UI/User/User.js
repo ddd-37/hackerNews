@@ -12,6 +12,10 @@ class User extends Component {
 
   async componentDidMount() {
     const { userId } = this.props.match.params;
+    console.log(
+      "TCL: User -> componentDidMount -> this.props.match.params",
+      this.props.match.params
+    );
     if (userId) {
       const userData = await axios.get(
         `https://hacker-news.firebaseio.com/v0/user/${userId}.json`

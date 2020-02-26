@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Stories from "../../UI/Story/Story";
 import Story from "../../UI/Story/Story";
 
 // TODO: Add error handling
 
-class News extends Component {
+class Top extends Component {
   state = {
     loading: true,
     data: null
@@ -14,7 +13,7 @@ class News extends Component {
   async componentDidMount() {
     try {
       const ids = await axios.get(
-        'https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty&orderBy="$key"&limitToFirst=30'
+        `https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty&orderBy="$key"&limitToFirst=30`
       );
 
       const storyPromises = ids.data.map(id => {
@@ -43,4 +42,4 @@ class News extends Component {
   }
 }
 
-export default News;
+export default Top;
