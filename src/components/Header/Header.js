@@ -12,12 +12,9 @@ const Header = props => (
         <span className="Header__title">Hacker News</span>
       </NavLink>
       <div>
-        <NavLink to="/new">new</NavLink> | {/* prettier-ignore */}
-        <NavLink to="/comments"> comments</NavLink> |
-        <NavLink to="/ask"> ask</NavLink> | {/* prettier-ignore */}
-        <NavLink to="/show"> show</NavLink> | {/* prettier-ignore */}
-        <NavLink to="/jobs"> jobs</NavLink> |
-        <NavLink to="/submit"> submit</NavLink>
+        <NavLink to="/new">new</NavLink> |<NavLink to="/ask"> ask</NavLink> |{" "}
+        <NavLink to="/show"> show</NavLink> |<NavLink to="/jobs"> jobs</NavLink>{" "}
+        |<NavLink to="/submit"> submit</NavLink>
       </div>
     </div>
     <div>login</div>

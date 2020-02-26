@@ -5,7 +5,6 @@ import { Switch, Route } from "react-router-dom";
 import News from "./../HeaderLinks/News/News";
 import New from "./../HeaderLinks/New/New";
 import Ask from "./../HeaderLinks/Ask/Ask";
-import Comments from "./../HeaderLinks/Comments/Comments";
 import Jobs from "./../HeaderLinks/Jobs/Jobs";
 import Submit from "./../HeaderLinks/Submit/Submit";
 import User from "../UI/User/User";
@@ -24,9 +23,6 @@ const AppRouter = () => (
     </Route>
     <Route path="/ask">
       <Ask />
-    </Route>
-    <Route path="/comments">
-      <Comments />
     </Route>
     <Route path="/jobs">
       <Jobs />
