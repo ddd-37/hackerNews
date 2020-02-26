@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import StoryTitleDomainLink from "./../StoryTitleDomainLink/StoryTitleDomainLink";
 
 class StoryComments extends Component {
   state = {
@@ -13,6 +14,7 @@ class StoryComments extends Component {
   async componentDidMount() {
     console.log(this.props);
     const { storyId } = this.props.match.params;
+
     const comments = await axios.get(
       `http://hn.algolia.com/api/v1/search?tags=comment,story_${storyId}`
     );
@@ -22,7 +24,12 @@ class StoryComments extends Component {
     );
   }
   render() {
-    return <div>StoryComments</div>;
+    const { url, title } = this.props.history.location.state;
+    return (
+      <div>
+        <StoryTitleDomainLink url={url} title={title} />
+      </div>
+    );
   }
 }
 
