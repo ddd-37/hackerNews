@@ -23,9 +23,10 @@ node/npm
 2. Enable marker/style changes to indicate previously red articles
 3. Enhance UI for mobile to improve experience
 
-## Issues OUTSTANDING
+## Issues OUTSTANDING (know)
 1. Issue: The API available from Hacker News while robust is a bit clunky to use at times. For example, if we were to request all the comments for a certain story, the API will return us the ID for each comment with the request for a story.  After which we need to make a request for each comment item from the API.
 - Solution: It may be possible to alleivate the numerous round trips to the Hacker News API by using [Algoia's Search API](https://hn.algolia.com/api). Algoia allow's for more custom requests were we can specify all comments for a certain story.
+- Edit (2.26.20) - Getting the comments from Algoia only gives us the most recent comments, as of now there is now way to find comments with nested chilrdren without making an excessive ammount of requests to the HN Api, will need to diable viewing each Story's comment s for now
 
 ## Issues SOLVED
 1. Issue: Using react-router with gh-pages was giving some odd behavoir.  After deploying to github pages I found my project's index route "/" was returning a 404 error, while on my local copy everything worked just fine. I was also losing the base url of hackernews/.
